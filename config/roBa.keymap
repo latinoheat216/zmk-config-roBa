@@ -63,12 +63,17 @@
             label = "TO_LAYER_0";
         };
 
-        paste_v: paste_v {
+        paste_val: paste_val {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(V))>, <&macro_tap>, <&kp V>;
+            bindings =
+                <&kp LC(LEFT_ALT)>,
+                <&macro_press>,
+                <&kp V>,
+                <&macro_release>,
+                <&kp V>;
 
-            label = "PASTE_V";
+            label = "PASTE_VAL";
         };
     };
 
@@ -167,10 +172,10 @@
 
         layer_7 {
             bindings = <
-&trans  &trans     &trans     &kp LC(R)  &trans                         &trans  &trans    &trans  &trans  &trans
-&trans  &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &trans      &trans  &trans  &trans    &trans  &trans  &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans      &trans  &trans  &paste_v  &trans  &trans  &trans
-&trans  &trans     &trans     &trans     &trans     &trans      &trans  &trans                            &trans
+&trans  &trans     &trans     &kp LC(R)  &trans                         &trans  &trans      &trans  &trans  &trans
+&trans  &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &trans      &trans  &trans  &trans      &trans  &trans  &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans      &trans  &trans  &paste_val  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &trans      &trans  &trans                              &trans
             >;
         };
     };
