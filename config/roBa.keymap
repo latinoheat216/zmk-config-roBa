@@ -62,6 +62,14 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        paste_v: paste_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(V))>, <&macro_tap>, <&kp V>;
+
+            label = "PASTE_V";
+        };
     };
 
     behaviors {
@@ -121,10 +129,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp HOME                &kp UP_ARROW    &kp END                  &trans                       &trans  &kp HOME  &kp UP    &kp END    &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans    &trans    &trans     &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                 &trans
+&kp LG(LEFT)     &kp HOME        &kp UP_ARROW    &kp END          &kp LG(RIGHT)                      &kp LG(LEFT)     &kp HOME  &kp UP    &kp END    &kp LG(RIGHT)
+&kp LA(LS(TAB))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LA(TAB)    &trans      &trans  &kp LS(LA(TAB))  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LA(TAB)
+&trans           &trans          &trans          &trans           &trans         &trans      &trans  &trans           &trans    &trans    &trans     &trans
+&trans           &trans          &trans          &trans           &trans         &trans      &trans  &trans                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -132,10 +140,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &to 0   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
 
@@ -159,10 +167,10 @@
 
         layer_7 {
             bindings = <
-&trans  &trans     &trans     &kp LC(R)  &trans                         &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans     &trans     &trans     &trans      &trans  &trans                          &trans
+&trans  &trans     &trans     &kp LC(R)  &trans                         &trans  &trans    &trans  &trans  &trans
+&trans  &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &trans      &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans      &trans  &trans  &paste_v  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &trans      &trans  &trans                            &trans
             >;
         };
     };
