@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: roBa}
 layers:
   default:
-  - Q
+  - ESCAPE
   - W
   - E
   - R
@@ -11,7 +11,7 @@ layers:
   - {t: I, h: SCROLL}
   - O
   - P
-  - A
+  - {t: A, h: '7'}
   - S
   - D
   - F
@@ -38,7 +38,7 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: '&to_layer_0 INT_HENKAN', h: '6'}
+  - {t: '&to_layer_0 LA(TILDE)', h: '6'}
   - {t: SPACE, h: NUM}
   - {t: '&to_layer_0 INT_MUHENKAN', h: ARROW}
   - BACKSPACE
@@ -94,11 +94,11 @@ layers:
   - KP 8
   - KP 9
   - +
-  - ^
-  - '&'
-  - '~'
-  - (
-  - )
+  - /
+  - '7'
+  - '8'
+  - '9'
+  - '-'
   - /
   - KP 4
   - KP 5
@@ -106,11 +106,11 @@ layers:
   - '*'
   - Ctl+Alt+KP 0
   - _
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
+  - '*'
+  - '4'
+  - '5'
+  - '6'
+  - +
   - {t: KP 0, h: LEFT SHIFT}
   - KP 1
   - KP 2
@@ -118,11 +118,11 @@ layers:
   - .
   - '='
   - {t: ▽, type: trans}
-  - '['
-  - ']'
-  - '{'
-  - '}'
-  - \
+  - BACKSPACE
+  - '1'
+  - '2'
+  - '3'
+  - ENTER
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -130,35 +130,35 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '0'
   - '|'
   ARROW:
-  - ESCAPE
-  - Ctl+Sft+TAB
-  - UP ARROW
-  - Ctl+TAB
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Gui+LEFT
   - HOME
+  - UP ARROW
+  - END
+  - Gui+RIGHT
+  - Gui+LEFT
+  - HOME
+  - UP
+  - END
+  - Gui+RIGHT
+  - Alt+Sft+TAB
   - LEFT ARROW
   - DOWN ARROW
   - RIGHT ARROW
-  - END
+  - Alt+TAB
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+Alt+TAB
+  - LEFT
+  - DOWN
+  - RIGHT
+  - Alt+TAB
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LEFT SHIFT
-  - Gui+Sft+LEFT ARROW
-  - {t: ▽, type: trans}
-  - Gui+Sft+RIGHT ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -196,8 +196,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&mkp MB1'
-  - '&mkp MB3'
   - '&mkp MB2'
+  - {t: default, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -308,6 +308,50 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BT CLR ALL
+  '7':
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctl+R
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - Ctl+A
+  - Ctl+S
+  - Ctl+D
+  - Ctl+F
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&paste_v'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [11, 12]
   k: TAB
