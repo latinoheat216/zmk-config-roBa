@@ -166,10 +166,10 @@
 
         layer_7 {
             bindings = <
-&trans  &trans     &trans     &kp LC(R)  &trans                         &trans  &trans      &trans  &trans  &trans
-&trans  &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &trans      &trans  &trans  &trans      &trans  &trans  &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans      &trans  &trans  &paste_val  &trans  &trans  &trans
-&trans  &trans     &trans     &trans     &trans     &trans      &trans  &trans                              &trans
+&trans  &trans     &trans     &kp LC(R)  &trans                         &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &trans      &trans  &trans                          &trans
             >;
         };
     };
