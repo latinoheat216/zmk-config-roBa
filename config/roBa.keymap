@@ -89,11 +89,16 @@
             tapping-term-ms = <200>;
         };
 
-      　encoder_msc_down_up: encoder_msc_down_up {
-        　  compatible = "zmk,behavior-sensor-rotate";
+        　
+
+        encoder_msc_down_up: encoder_msc_down_up {
+            　
+
+            compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
@@ -109,7 +114,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 5 LA(TILDE)  &lt 2 SPACE  &lt 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 DELETE                             &kp DEL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         FUNCTION {
