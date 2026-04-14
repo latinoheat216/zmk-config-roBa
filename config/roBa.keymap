@@ -64,19 +64,6 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
-
-        paste_val: paste_val {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LC(LEFT_ALT)>,
-                <&macro_press>,
-                <&kp V>,
-                <&macro_release>,
-                <&kp V>;
-
-            label = "PASTE_VAL";
-        };
     };
 
     behaviors {
@@ -89,16 +76,11 @@
             tapping-term-ms = <200>;
         };
 
-        　
-
         encoder_msc_down_up: encoder_msc_down_up {
-            　
-
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
             tap-ms = <20>;
         };
     };
