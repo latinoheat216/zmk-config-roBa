@@ -40,14 +40,19 @@
             key-positions = <12 13>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
+        };
+
+        Mousebotton1 {
+            bindings = <&mkp LCLK>;
+            key-positions = <18 19>;
+        };
+
+        Mousebotton2 {
+            bindings = <&mkp RCLK>;
+            key-positions = <19 20>;
         };
     };
 
